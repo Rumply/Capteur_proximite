@@ -29,10 +29,14 @@ public class MainActivity extends Activity implements SensorEventListener{
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_PROXIMITY) {
             if (event.values[0] == 0) {
-                //Proche
+                //Action quand un objet est proche.
+
+                // Change le background de couleur.
                 getWindow().getDecorView().setBackgroundColor(Color.argb(125,0,0,0));
             } else {
-                //Loin
+                //Action quand un objet est loin. (Couleur noir peux nuir.)
+
+                // Change le background de couleur.
                 getWindow().getDecorView().setBackgroundColor(Color.argb(255,255,255,255));
             }
         }
